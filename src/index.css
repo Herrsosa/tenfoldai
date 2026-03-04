@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════
+   Tenfold AI — Global Styles & Reset
+   ═══════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f6f9fc;
+  color: #3a4a5c;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Form placeholders ─── */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ─── Focus-visible outlines for a11y ─── */
+:focus-visible {
+  outline: 2px solid #1a6fc4;
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Responsive nav ─── */
+.desktop-nav {
+  display: flex !important;
+}
+.mobile-nav-toggle {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-nav-toggle {
+    display: flex !important;
+  }
+}
+
+/* ─── Responsive hero typography ─── */
+@media (max-width: 480px) {
+  .hero-subtitle {
+    font-size: 14px !important;
+  }
+  .hero-cta-group {
+    flex-direction: column !important;
+  }
+  .hero-cta-group button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ─── Card stacking on small screens ─── */
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .audit-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .results-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── Smooth scroll offset for fixed nav ─── */
+section[id] {
+  scroll-margin-top: 72px;
+}
