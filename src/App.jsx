@@ -263,10 +263,32 @@ export default function App() {
   const [auditDesc, setAuditDesc] = useState("");
   const [auditEmail, setAuditEmail] = useState("");
   const [auditSent, setAuditSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [modal, setModal] = useState(null); // 'impressum' | 'privacy' | null
   const t = tx[lang];
 
   useEffect(() => { const fn = () => setSc(window.scrollY > 40); window.addEventListener("scroll", fn, { passive: true }); return () => window.removeEventListener("scroll", fn); }, []);
+
+  const handleAuditSubmit = async () => {
+    if ((!auditUrl && !auditDesc) || !auditEmail) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formspree.io/f/mykdrngv", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ website: auditUrl, description: auditDesc, email: auditEmail }),
+      });
+      if (response.ok) {
+        setAuditSent(true);
+      } else {
+        alert("Something went wrong. Please try again or contact us directly.");
+      }
+    } catch (err) {
+      alert("Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
 
   const go = id => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); setMob(false); };
@@ -454,12 +476,12 @@ export default function App() {
                       background: "rgba(255,255,255,.08)", border: "1.5px solid rgba(255,255,255,.12)", borderRadius: 10,
                       padding: "14px 16px", color: "#fff", fontSize: 14, fontFamily: "inherit", outline: "none", resize: "vertical", transition: "border-color .2s",
                     }} onFocus={e => e.target.style.borderColor = "rgba(255,255,255,.35)"} onBlur={e => e.target.style.borderColor = "rgba(255,255,255,.12)"} />
-                    <button onClick={() => { if ((auditUrl || auditDesc) && auditEmail) setAuditSent(true); }} style={{
-                      background: "#fff", color: "#0c2340", border: "none", borderRadius: 10, padding: "14px 24px",
-                      fontSize: 14.5, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", transition: "all .25s",
-                      boxShadow: "0 4px 16px rgba(0,0,0,.15)",
-                    }} onMouseEnter={e => { e.target.style.transform = "translateY(-1px)"; e.target.style.boxShadow = "0 6px 24px rgba(0,0,0,.2)"; }}
-                      onMouseLeave={e => { e.target.style.transform = "none"; e.target.style.boxShadow = "0 4px 16px rgba(0,0,0,.15)"; }}>{t.audit.btn} →</button>
+                    <button onClick={handleAuditSubmit} disabled={isSubmitting} style={{
+                      background: isSubmitting ? "#e0e7ff" : "#fff", color: "#0c2340", border: "none", borderRadius: 10, padding: "14px 24px",
+                      fontSize: 14.5, fontWeight: 700, cursor: isSubmitting ? "not-allowed" : "pointer", fontFamily: "inherit", transition: "all .25s",
+                      boxShadow: "0 4px 16px rgba(0,0,0,.15)", opacity: isSubmitting ? 0.8 : 1,
+                    }} onMouseEnter={e => { if (!isSubmitting) { e.target.style.transform = "translateY(-1px)"; e.target.style.boxShadow = "0 6px 24px rgba(0,0,0,.2)"; } }}
+                      onMouseLeave={e => { if (!isSubmitting) { e.target.style.transform = "none"; e.target.style.boxShadow = "0 4px 16px rgba(0,0,0,.15)"; } }}>{isSubmitting ? "..." : t.audit.btn} →</button>
                   </div>
                 )}
               </div>
@@ -524,7 +546,7 @@ export default function App() {
         <div style={{ ...W, position: "relative", zIndex: 1, textAlign: "center" }}>
           <h2 style={{ fontFamily: "'DM Serif Display',Georgia,serif", fontSize: "clamp(24px,3.5vw,36px)", fontWeight: 400, color: "#fff", margin: "0 0 12px" }}>{t.footer.h2}</h2>
           <p style={{ fontSize: 15, color: "rgba(255,255,255,.6)", maxWidth: 480, margin: "0 auto 28px", lineHeight: 1.7 }}>{t.footer.sub}</p>
-          <button onClick={() => window.open("https://calendly.com/YOUR-LINK", "_blank")} style={{
+          <button onClick={() => window.open("https://calendly.com/nilshertzner/30min", "_blank")} style={{
             background: "#fff", color: "#0c2340", border: "none", borderRadius: 8, padding: "15px 36px",
             fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", transition: "all .25s",
             boxShadow: "0 4px 20px rgba(0,0,0,.15)",
