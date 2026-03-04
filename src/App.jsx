@@ -75,29 +75,18 @@ const tx = {
       sub: "Schedule your free consultation today and discover where AI fits in your operations.",
       btn: "Get Started",
       copy: "© 2026 Tenfold AI Consulting. All rights reserved.",
-      priv: "Privacy Policy", terms: "Imprint"
-    },
-    impressum: {
-      title: "Imprint (Impressum)",
-      content: [
-        { h: "Information according to § 5 TMG", p: "Nils [LAST NAME]\nTenfold AI Consulting\n[STREET ADDRESS]\n[POSTCODE] Schopfheim\nGermany" },
-        { h: "Contact", p: "Phone: [YOUR PHONE]\nEmail: [YOUR EMAIL]\nWebsite: [YOUR DOMAIN]" },
-        { h: "VAT ID", p: "VAT identification number according to §27a UStG:\n[YOUR USt-IdNr. OR: Kleinunternehmer gem. §19 UStG]" },
-        { h: "Responsible for content acc. § 55 Abs. 2 RStV", p: "Nils [LAST NAME]\n[STREET ADDRESS]\n[POSTCODE] Schopfheim" },
-        { h: "Dispute Resolution", p: "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr/\nWe are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board." },
-        { h: "Liability for Content", p: "As a service provider, we are responsible for our own content on these pages under general law (§ 7 Abs.1 TMG). According to §§ 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information. Obligations to remove or block the use of information under general laws remain unaffected. Liability is only possible from the time of knowledge of a specific infringement. Upon becoming aware of such violations, we will remove this content immediately." }
-      ]
+      priv: "Privacy Policy"
     },
     privacy: {
       title: "Privacy Policy",
       content: [
-        { h: "1. Overview", p: "The following provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you." },
-        { h: "2. Controller", p: "Nils [LAST NAME]\nTenfold AI Consulting\n[STREET ADDRESS]\n[POSTCODE] Schopfheim, Germany\nEmail: [YOUR EMAIL]" },
-        { h: "3. Data We Collect", p: "Your data is collected either by you providing it to us (e.g., data entered in the audit request form: email address, website URL, business description) or automatically by our IT systems when you visit the website (technical data such as browser type, operating system, time of access, IP address)." },
-        { h: "4. How We Use Your Data", p: "Audit request data is used solely to prepare and deliver your requested AI strategy audit. We do not share this data with third parties. Your data will be deleted upon request or after 12 months if no business relationship is established." },
-        { h: "5. Analytics", p: "[UPDATE: This website uses Plausible Analytics / Google Analytics. If Plausible: a privacy-friendly tool that does not use cookies and does not collect personal data.]" },
-        { h: "6. Your Rights", p: "You have the right to free information about your stored personal data, its origin and recipients, and the purpose of data processing, as well as the right to correction or deletion of this data at any time. Contact us at the address given in the imprint." },
-        { h: "7. Hosting", p: "[UPDATE: Hosted by Vercel / Netlify]. The hosting provider may collect server log files (IP address, browser type, operating system, referrer URL, time of access). This data cannot be attributed to specific individuals." }
+        { h: "1. Overview", p: "We are committed to protecting your privacy. This policy explains how we collect and use your data when you use our website. We are UK-based and follow the GDPR (Data Protection Act 2018)." },
+        { h: "2. Data Controller", p: "Tenfold AI Consulting\nEmail: [YOUR EMAIL]" },
+        { h: "3. Data We Collect", p: "We collect data through our audit request form (email, website URL, description) and standard technical data (IP address, browser type) via our hosting provider." },
+        { h: "4. How We Use Your Data", p: "Data submitted via forms is used purely to provide the services you requested. Technical data is used to maintain site health and security." },
+        { h: "5. Analytics & Cookies", p: "We use Vercel Analytics to understand site traffic. This is a privacy-first tool that does not use cookies and does not collect personal data. No cookie banner is required." },
+        { h: "6. Hosting", p: "Our website is hosted on Vercel. They process technical data necessary for site delivery, which is deleted automatically." },
+        { h: "7. Your Rights", p: "If you are in the UK or EU, you have the right to access, correct, or delete your data. Contact us at the email provided above." }
       ]
     }
   },
@@ -175,29 +164,18 @@ const tx = {
       sub: "Vereinbaren Sie Ihre kostenlose Beratung und entdecken Sie, wo KI in Ihr Unternehmen passt.",
       btn: "Jetzt starten",
       copy: "© 2026 Tenfold AI Consulting. Alle Rechte vorbehalten.",
-      priv: "Datenschutz", terms: "Impressum"
-    },
-    impressum: {
-      title: "Impressum",
-      content: [
-        { h: "Angaben gemäß § 5 TMG", p: "Nils [NACHNAME]\nTenfold AI Consulting\n[STRAßE HAUSNUMMER]\n[PLZ] Schopfheim\nDeutschland" },
-        { h: "Kontakt", p: "Telefon: [IHRE TELEFONNUMMER]\nE-Mail: [IHRE E-MAIL]\nWebsite: [IHRE DOMAIN]" },
-        { h: "Umsatzsteuer-ID", p: "Umsatzsteuer-Identifikationsnummer gemäß §27a UStG:\n[IHRE USt-IdNr. ODER: Kleinunternehmer gem. §19 UStG]" },
-        { h: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV", p: "Nils [NACHNAME]\n[STRAßE HAUSNUMMER]\n[PLZ] Schopfheim" },
-        { h: "Streitschlichtung", p: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/\nWir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen." },
-        { h: "Haftung für Inhalte", p: "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen." }
-      ]
+      priv: "Datenschutz"
     },
     privacy: {
       title: "Datenschutzerklärung",
       content: [
-        { h: "1. Überblick", p: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können." },
-        { h: "2. Verantwortliche Stelle", p: "Nils [NACHNAME]\nTenfold AI Consulting\n[STRAßE HAUSNUMMER]\n[PLZ] Schopfheim, Deutschland\nE-Mail: [IHRE E-MAIL]" },
-        { h: "3. Welche Daten wir erheben", p: "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z.B. Daten im Audit-Anfrageformular: E-Mail-Adresse, Website-URL, Unternehmensbeschreibung). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (technische Daten wie Browsertyp, Betriebssystem, Uhrzeit des Zugriffs, IP-Adresse)." },
-        { h: "4. Verwendung Ihrer Daten", p: "Daten aus Audit-Anfragen werden ausschließlich zur Erstellung und Zustellung Ihres angeforderten KI-Strategie-Audits verwendet. Wir geben diese Daten nicht an Dritte weiter. Ihre Daten werden auf Anfrage oder nach 12 Monaten ohne Geschäftsbeziehung gelöscht." },
-        { h: "5. Analyse", p: "[AKTUALISIEREN: Diese Website nutzt Plausible Analytics / Google Analytics. Bei Plausible: ein datenschutzfreundliches Tool, das keine Cookies verwendet und keine personenbezogenen Daten erhebt.]" },
-        { h: "6. Ihre Rechte", p: "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Kontaktieren Sie uns unter der im Impressum angegebenen Adresse." },
-        { h: "7. Hosting", p: "[AKTUALISIEREN: Gehostet bei Vercel / Netlify]. Der Hosting-Anbieter kann Server-Logfiles erheben (IP-Adresse, Browsertyp, Betriebssystem, Referrer-URL, Zugriffszeit). Diese Daten sind keiner bestimmten Person zuordenbar." }
+        { h: "1. Überblick", p: "Ihre Privatsphäre ist uns wichtig. Wir verarbeiten Ihre Daten gemäß den geltenden Datenschutzgesetzen (DSGVO)." },
+        { h: "2. Verantwortliche Stelle", p: "Tenfold AI Consulting\nE-Mail: [IHRE E-MAIL]" },
+        { h: "3. Datenerhebung", p: "Wir erheben Daten über unser Audit-Anfrageformular und technische Standarddaten über unseren Hostinganbieter." },
+        { h: "4. Nutzung Ihrer Daten", p: "Daten aus Formularen werden ausschließlich zur Erbringung der gewünschten Leistung genutzt. Technische Daten dienen der Sicherheit und Stabilität." },
+        { h: "5. Analyse & Cookies", p: "Wir nutzen Vercel Analytics – ein datenschutzkonformes Tool, das keine Cookies setzt und keine personenbezogenen Daten erhebt." },
+        { h: "6. Hosting", p: "Die Website wird bei Vercel gehostet. Technische Protokolldaten werden automatisch nach kurzer Zeit gelöscht." },
+        { h: "7. Ihre Rechte", p: "Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten. Kontaktieren Sie uns per E-Mail." }
       ]
     }
   }
@@ -560,8 +538,6 @@ export default function App() {
         <div style={{ ...W, display: "flex", justifyContent: "center", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
           <span onClick={() => setModal("privacy")} style={{ fontSize: 12, color: "rgba(255,255,255,.3)", cursor: "pointer", transition: "color .2s" }} onMouseEnter={e => e.target.style.color = "rgba(255,255,255,.6)"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,.3)"}>{t.footer.priv}</span>
           <span style={{ fontSize: 12, color: "rgba(255,255,255,.15)" }}>|</span>
-          <span onClick={() => setModal("impressum")} style={{ fontSize: 12, color: "rgba(255,255,255,.3)", cursor: "pointer", transition: "color .2s" }} onMouseEnter={e => e.target.style.color = "rgba(255,255,255,.6)"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,.3)"}>{t.footer.terms}</span>
-          <span style={{ fontSize: 12, color: "rgba(255,255,255,.15)" }}>|</span>
           <span style={{ fontSize: 12, color: "rgba(255,255,255,.3)" }}>{t.footer.copy}</span>
         </div>
       </footer>
@@ -596,6 +572,6 @@ export default function App() {
       )}
 
 
-    </div>
+    </div >
   );
 }
